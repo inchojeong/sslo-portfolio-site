@@ -2,7 +2,6 @@
 import { ref, computed } from 'vue';
 import PageHero from '../components/PageHero.vue';
 import CtaBand from '../components/CtaBand.vue';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import { ChevronDown } from 'lucide-vue-next';
 import { projects, projectTypes } from '../data/projects';
 
@@ -52,7 +51,7 @@ const labels = { program: '사업 구분', role: '티벨 역할', client: '참�
             <span class="item__year">{{ period(p) }}</span>
             <span class="item__main">
               <span class="chip">{{ projectTypes[p.type] }}</span>
-              <strong class="item__title">{{ p.title }}<VerifyFlag :note="p.verify" /></strong>
+              <strong class="item__title">{{ p.title }}</strong>
               <span v-if="p.client" class="muted small">{{ p.client }}</span>
             </span>
             <ChevronDown class="item__arrow" :class="{ 'is-open': open === p.id }" :size="20" :stroke-width="1.75" aria-hidden="true" />

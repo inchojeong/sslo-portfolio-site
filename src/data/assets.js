@@ -19,8 +19,8 @@ export const applications = [
 ];
 
 export const certifications = [
-  { title: '기술혁신형 중소기업(Inno-Biz) 인증', verify: '인증 유효기간 확인 필요' },
-  { title: '벤처기업 확인서', verify: '인증 유효기간 확인 필요' },
+  { title: '기술혁신형 중소기업(Inno-Biz) 인증' },
+  { title: '벤처기업 확인서' },
 ];
 
 export const awards = [

@@ -2,7 +2,6 @@
 import PageHero from '../components/PageHero.vue';
 import SectionHead from '../components/SectionHead.vue';
 import FlowSteps from '../components/FlowSteps.vue';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import CtaBand from '../components/CtaBand.vue';
 import { servicesIntro, services, approach, proofs, researchBase } from '../data/services';
 
@@ -56,7 +55,7 @@ const nameOf = (slug) => services.find((s) => s.slug === slug)?.name;
       <ul class="rows proofs">
         <li v-for="p in proofs" :key="p.id" v-reveal>
           <div class="proofs__main">
-            <h3 class="h3">{{ p.title }}<VerifyFlag :note="p.verify" /></h3>
+            <h3 class="h3">{{ p.title }}</h3>
             <p class="muted">{{ p.focus }}</p>
           </div>
           <p class="tags">

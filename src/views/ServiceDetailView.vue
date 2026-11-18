@@ -5,7 +5,6 @@ import SectionHead from '../components/SectionHead.vue';
 import PipelineViz from '../components/PipelineViz.vue';
 import StepFlow from '../components/StepFlow.vue';
 import AnnotationSample from '../components/AnnotationSample.vue';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import CtaBand from '../components/CtaBand.vue';
 import { services, details, proofs } from '../data/services';
 import { projects, projectTypes } from '../data/projects';
@@ -39,7 +38,7 @@ const relatedProofs = computed(() =>
     .filter((p) => p.services.includes(props.slug))
     .map((p) => {
       const pr = p.projectId ? project(p.projectId) : null;
-      return { ...p, pr, period: pr ? years(pr) : p.years, verify: p.verify || pr?.verify };
+      return { ...p, pr, period: pr ? years(pr) : p.years };
     }),
 );
 </script>
@@ -179,7 +178,7 @@ const relatedProofs = computed(() =>
           <SectionHead :eyebrow="s.eyebrow" :title="s.title" :lead="s.lead" />
           <div class="cases">
             <article v-for="it in s.items" :key="it.title" class="flat" v-reveal>
-              <h3 class="h3">{{ it.title }}<VerifyFlag :note="it.verify" /></h3>
+              <h3 class="h3">{{ it.title }}</h3>
               <p class="dim">{{ it.text }}</p>
               <p v-if="it.projectId && project(it.projectId)?.tech" class="tags">
                 <span v-for="t in project(it.projectId).tech" :key="t" class="chip">{{ t }}</span>
@@ -201,7 +200,7 @@ const relatedProofs = computed(() =>
           <SectionHead :eyebrow="s.eyebrow" :title="s.title" :lead="s.lead" />
           <div class="grid grid--flat grid--2">
             <article v-for="c in s.columns" :key="c.title" class="flat" v-reveal>
-              <h3 class="h3">{{ c.title }}<VerifyFlag v-if="c.title.startsWith('대표')" :note="s.verify" /></h3>
+              <h3 class="h3">{{ c.title }}</h3>
               <ul class="dot">
                 <li v-for="it in c.items" :key="it">{{ it }}</li>
               </ul>
@@ -222,7 +221,7 @@ const relatedProofs = computed(() =>
               <span v-if="p.pr?.client">{{ p.pr.client }}</span>
               <span v-if="p.pr" class="chip chip--slate">{{ projectTypes[p.pr.type] }}</span>
             </p>
-            <h3 class="h3">{{ p.title }}<VerifyFlag :note="p.verify" /></h3>
+            <h3 class="h3">{{ p.title }}</h3>
             <p class="muted">{{ p.focus }}</p>
             <p v-if="p.pr?.outputs" class="tags"><span v-for="o in p.pr.outputs.filter((x) => !x.startsWith('특허'))" :key="o" class="chip chip--violet">{{ o }}</span></p>
             <RouterLink :to="p.to" class="text-link">자세히 보기 →</RouterLink>

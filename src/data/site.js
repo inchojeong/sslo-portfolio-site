@@ -1,6 +1,5 @@
 // 사이트 전역 정보. 문구/수치는 "티벨 회사소개서 2.0V (2026.10.01)" 및
 // "연구개발 이력 및 홈페이지 개편 기획 요약(2026.11.18)" 기준입니다.
-// verify: 게시 전에 최신 상태를 확인해야 하는 항목 (개발 모드에서만 표시됨)
 
 export const site = {
   name: 'S.S.L.O',
@@ -18,7 +17,6 @@ export const site = {
     {
       type: '본사',
       address: '서울특별시 강남구 강남대로 354, 9층 (역삼동, 혜천빌딩)',
-      verify: '회사소개서 본문(905호)과 말미(9층) 표기가 다름 — 게시 전 확인',
     },
     {
       type: '가산 지사',
@@ -36,7 +34,6 @@ export const nav = [
     children: [
       { label: '연구개발 연혁', to: '/rnd/history', desc: '2015년부터 이어진 개발 활동' },
       { label: '수행실적', to: '/rnd/projects', desc: '프로젝트별 역할과 결과물' },
-      { label: '진행 중 연구개발', to: '/rnd/ongoing', desc: '2026년 이후 수행 현황' },
     ],
   },
   {
@@ -64,17 +61,15 @@ export const stats = [
     label: '특허 출원',
     suffix: '종',
     note: '회사소개서 기재 기준',
-    verify: '출원 → 등록 여부 등 최신 상태 확인 필요',
   },
   { value: 220, label: '임직원', suffix: '명', note: '2025년 12월 기준' },
 ];
 
-// 홈 "신뢰 구조": 과거 수행실적 → 현재 프로젝트 → 자체 솔루션 → 검증 가능한 성과
+// 홈 "신뢰 구조": 수행실적 → 자체 솔루션 → 검증 가능한 성과
 export const evidenceChain = [
   { step: '01', title: '수행실적', text: '연도별 연구개발 이력과 프로젝트별 역할·결과물', to: '/rnd/projects' },
-  { step: '02', title: '현재 프로젝트', text: '2026년 이후 수행 중인 사업과 단계별 현황', to: '/rnd/ongoing' },
-  { step: '03', title: '자체 솔루션', text: 'S.S.L.O 데이터 관리·자동 라벨링·검수 흐름', to: '/sslo' },
-  { step: '04', title: '검증 가능한 성과', text: '특허·인증·수상과 시연 화면, 산출물', to: '/assets' },
+  { step: '02', title: '자체 솔루션', text: 'S.S.L.O 데이터 관리·자동 라벨링·검수 흐름', to: '/sslo' },
+  { step: '03', title: '검증 가능한 성과', text: '특허·인증·수상과 시연 화면, 산출물', to: '/assets' },
 ];
 
 export const businessAreas = [

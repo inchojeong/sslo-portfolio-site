@@ -15,12 +15,10 @@ npm run build
 | `site.js` | 회사 정보, 메뉴(`nav`), 핵심 지표, 사업영역, 조직, 고객사, ESG |
 | `history.js` | 연도별 연혁 (`core: true` = "연구개발 핵심" 보기에 포함) |
 | `projects.js` | 수행실적 — 비어 있는 필드는 "상세 정보 준비 중"으로 표시 |
-| `ongoing.js` | 2026년 이후 진행 중 과제 (배열이 비면 안내 문구 표시) |
 | `assets.js` | 특허·출원·인증·수상·증빙 자료 |
 | `sslo.js` | S.S.L.O 흐름·도구·대시보드·서비스 절차 |
 | `cases.js` | 분야별 사례, 구현 사례 상세 |
 
-- `verify` 필드가 있는 항목은 개발 모드에서 "확인 필요" 배지가 보입니다. 배포 빌드에서는 숨겨집니다. (`VITE_SHOW_VERIFY=true`로 켤 수 있음)
 - 새 페이지: `src/views/`에 뷰 추가 → `src/router.js`에 라우트 → `src/data/site.js`의 `nav`에 메뉴 추가.
 - 문의 폼: `.env.example` 참고. `VITE_CONTACT_ENDPOINT`(API) 또는 `VITE_CONTACT_EMAIL`(mailto) 설정.
 

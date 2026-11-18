@@ -6,7 +6,6 @@ const routes = [
   { path: '/rnd', redirect: '/rnd/history' },
   { path: '/rnd/history', component: () => import('./views/HistoryView.vue'), meta: { title: '연구개발 연혁' } },
   { path: '/rnd/projects', component: () => import('./views/ProjectsView.vue'), meta: { title: '수행실적' } },
-  { path: '/rnd/ongoing', component: () => import('./views/OngoingView.vue'), meta: { title: '진행 중 연구개발' } },
   { path: '/services', component: () => import('./views/ServicesView.vue'), meta: { title: 'AI 서비스' } },
   { path: '/services/data-build', component: () => import('./views/ServiceDetailView.vue'), props: { slug: 'data-build' }, meta: { title: 'AI 데이터 구축' } },
   { path: '/services/data-analytics', component: () => import('./views/ServiceDetailView.vue'), props: { slug: 'data-analytics' }, meta: { title: '데이터 분석·활용' } },

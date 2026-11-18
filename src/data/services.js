@@ -1,6 +1,5 @@
 // AI 서비스 소개. 출처: "S.S.L.O AI 서비스 콘텐츠 기획안(개정, 데이터 분석 강화) 2026.11.18"과
 // 티벨 회사소개서 2.0V (2026.10.01). 이미 사이트에 있는 데이터(sslo.js, cases.js, projects.js)는 각 페이지에서 그대로 가져다 씁니다.
-// verify: 게시 전에 확인해야 하는 항목 (개발 모드에서만 "확인 필요"로 표시됨)
 
 export const servicesIntro = {
   title: 'AI 서비스',
@@ -95,7 +94,6 @@ export const proofs = [
     services: ['data-analytics', 'analytics-system'],
     focus: '메타데이터·가공 현황·팀별 진행률의 시각화',
     to: '/sslo',
-    verify: '대시보드 화면과 적용 범위 확인 필요 (회사소개서 14쪽)',
   },
   {
     id: 'baas',
@@ -112,7 +110,6 @@ export const proofs = [
     services: ['ai-learning'],
     focus: '인간 인식 모델 베타, LLM as a Judge 평가 기술',
     to: '/rnd/history',
-    verify: '개발 범위·결과물 상세 확보 필요',
   },
 ];
 
@@ -275,14 +272,12 @@ export const details = {
             deepDive: 'can',
             projectId: 'vehicle-field-data',
             text: '차량과 장치에서 수집되는 CAN·GPS·센서 데이터를 서버와 DB로 연결하고, 웹 화면에서 확인하는 시스템입니다.',
-            verify: '구성도 원본(회사소개서 17쪽)과 대조 필요',
           },
           {
             title: '데이터 가공 현황 대시보드',
             fromDashboard: true,
             text: '이미지·Annotation 파일 및 메타데이터를 관리하고, 라벨링 진행 상황과 프로젝트·팀별 마일스톤을 확인하는 운영 화면입니다.',
             flow: ['이미지 DB · Annotation 스토리지', 'Meta Data SQL 연동', '대시보드 Visualization', '진척도 · Milestone 관리'],
-            verify: '화면 캡처와 구성도 확보 필요 (회사소개서 14쪽)',
           },
           {
             title: 'E-CHECK 전력량계 인식 솔루션',
@@ -335,7 +330,6 @@ export const details = {
             items: ['2022 · 인간 인식 AI 모델(베타) 개발', '2025 · AI 기반 LLM as a Judge 자동평가 기술 개발'],
           },
         ],
-        verify: '개별 AI 모델의 상용화 여부, 최신 모델 버전, 성능 수치와 실제 서비스 제공 범위는 기술부서 검토 후 공개',
       },
     ],
   },

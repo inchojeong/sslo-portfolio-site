@@ -3,7 +3,6 @@ import PageHero from '../components/PageHero.vue';
 import SectionHead from '../components/SectionHead.vue';
 import CtaBand from '../components/CtaBand.vue';
 import { HeartHandshake, Sprout, Globe, MapPin } from 'lucide-vue-next';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import { site, businessAreas, organization, customers, esg } from '../data/site';
 
 const esgIcons = [HeartHandshake, Sprout, Globe];
@@ -78,7 +77,7 @@ const info = [
       </div>
       <p class="muted small note">
         고객사·연구기관명과 수행 내용은 외부 공개 가능 여부 확인 후 게시 범위를 조정합니다.
-        <VerifyFlag note="고객사명 외부 공개 가능 여부 확인 필요" />
+        
       </p>
     </div>
   </section>
@@ -102,7 +101,7 @@ const info = [
       <div class="grid grid--flat grid--2">
         <article v-for="o in site.offices" :key="o.type" class="flat" v-reveal>
           <div class="loc__top"><MapPin class="ico" :size="20" :stroke-width="1.75" aria-hidden="true" /><span class="chip">{{ o.type }}</span></div>
-          <p class="h3 addr">{{ o.address }}<VerifyFlag :note="o.verify" /></p>
+          <p class="h3 addr">{{ o.address }}</p>
           <a :href="mapUrl(o.address)" target="_blank" rel="noopener" class="text-link">지도에서 보기 ↗</a>
         </article>
       </div>

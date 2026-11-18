@@ -4,7 +4,6 @@ import PageHero from '../components/PageHero.vue';
 import SectionHead from '../components/SectionHead.vue';
 import CtaBand from '../components/CtaBand.vue';
 import { Image, Video, Package, ShieldCheck } from 'lucide-vue-next';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import { patents, applications, certifications, awards, evidence } from '../data/assets';
 import { stats } from '../data/site';
 
@@ -31,7 +30,7 @@ const appStat = stats.find((s) => s.label === '특허 출원');
       <SectionHead eyebrow="Patents" title="특허 및 출원" />
       <div class="sum">
         <div class="flat"><b>{{ patentStat.value }}</b><span>보유 특허</span></div>
-        <div class="flat"><b>{{ appStat.value }}</b><span>특허 출원<VerifyFlag :note="appStat.verify" /></span></div>
+        <div class="flat"><b>{{ appStat.value }}</b><span>특허 출원</span></div>
       </div>
 
       <div class="filter-bar bar">
@@ -76,7 +75,7 @@ const appStat = stats.find((s) => s.label === '특허 출원');
       <div class="grid grid--flat grid--2">
         <article v-for="c in certifications" :key="c.title" class="flat cert" v-reveal>
 
-          <h3 class="h3">{{ c.title }}<VerifyFlag :note="c.verify" /></h3>
+          <h3 class="h3">{{ c.title }}</h3>
         </article>
       </div>
     </div>

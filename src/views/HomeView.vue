@@ -37,7 +37,6 @@ const topAwards = awards.filter((a) => a.org).slice(0, 4);
 
     <div class="container hero__in">
       <div class="hero__copy">
-        <p class="pill"><i /> TBELL R&amp;D PORTFOLIO · S.S.L.O</p>
         <h1 class="h1">
           데이터를 구축하고<br />
           소프트웨어를 개발해 온<br />
@@ -70,7 +69,7 @@ const topAwards = awards.filter((a) => a.org).slice(0, 4);
       <SectionHead
         eyebrow="How we show"
         title="실적에서 성과까지, 확인 순서대로 보여드립니다"
-        lead="기술을 화려하게 나열하기보다 과거 수행실적 → 현재 프로젝트 → 자체 솔루션 → 검증 가능한 성과 순으로 근거를 제시합니다."
+        lead="기술을 화려하게 나열하기보다 수행실적 → 자체 솔루션 → 검증 가능한 성과 순으로 근거를 제시합니다."
       />
       <ol class="chain">
         <li v-for="(c, i) in evidenceChain" :key="c.to" v-reveal="i * 90">
@@ -179,12 +178,6 @@ const topAwards = awards.filter((a) => a.org).slice(0, 4);
 
 .hero__in { position: relative; display: grid; grid-template-columns: 1fr; align-items: center; }
 .hero__copy { display: grid; gap: 26px; justify-items: start; }
-.pill {
-  display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.14em;
-  color: var(--violet-300); border: 1px solid rgb(133 121 243 / 40%); background: rgb(133 121 243 / 12%); backdrop-filter: blur(8px);
-}
-.pill i { width: 8px; height: 8px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 0 0 rgb(217 100 182 / 70%); animation: ping 2s infinite; }
-@keyframes ping { 70% { box-shadow: 0 0 0 10px rgb(133 121 243 / 0%); } 100% { box-shadow: 0 0 0 0 rgb(133 121 243 / 0%); } }
 .hero .h1 { text-shadow: 0 0 60px rgb(133 121 243 / 35%); }
 .hero .lead { color: #b3b8dc; }
 .hero__btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
@@ -197,7 +190,7 @@ const topAwards = awards.filter((a) => a.org).slice(0, 4);
 .mq { display: grid; gap: 14px; padding: 36px 0; background: var(--navy-950); border-top: 1px solid #15183f; border-bottom: 1px solid #15183f; }
 
 /* ---------- chain ---------- */
-.chain { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.chain { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
 .chain__card { display: grid; gap: 10px; height: 100%; padding: 32px 26px; }
 .chain__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
 .chain__no { font-size: 36px; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }

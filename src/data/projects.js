@@ -4,7 +4,7 @@
 //
 // {
 //   id, title, years: [시작년, 종료년?], type, client?, program?,   // program: 사업 구분(정부지원사업명 등)
-//   role?, summary, outputs?: [], tech?: [], source, verify?
+//   role?, summary, outputs?: [], tech?: [], source
 // }
 
 export const projectTypes = {
@@ -39,7 +39,6 @@ export const projects = [
       '2020·2021·2022년 데이터바우처 공급/판매기업으로 지정되어 AI 학습데이터 구축 프로젝트를 수행했습니다. (2020년 7개사, 2021년 6개사, 2022년 6개사)',
     outputs: ['AI 학습데이터셋', '라벨링 플랫폼 운영 경험'],
     source: '회사소개서 5p',
-    verify: '개별 과제명·기간·수요기업은 공식 자료 확보 필요',
   },
   {
     id: 'labeling-platform',
@@ -71,7 +70,6 @@ export const projects = [
     tech: ['OBD-II', 'CAN', 'LTE', 'React', 'Node.js', 'TypeScript', 'InfluxDB', 'MySQL'],
     outputs: ['실차 데이터 취득 장비 연동', 'CAN 데이터 모니터링 대시보드'],
     source: '회사소개서 5, 17, 25p',
-    verify: '고객사·연구기관명 외부 공개 가능 여부 확인',
   },
   {
     id: 'chassis-db',
@@ -82,7 +80,6 @@ export const projects = [
     summary: '차량의 실제 주행 데이터와 주행 환경 정보를 취득하고 분석 기법을 적용해 부품 영향도 분석용 DB를 구축했습니다.',
     outputs: ['영향도 분석 DB'],
     source: '회사소개서 5, 17, 25p',
-    verify: '고객사·연구기관명 외부 공개 가능 여부 확인',
   },
   {
     id: 'outdoor-ad',
@@ -110,7 +107,6 @@ export const projects = [
     type: 'mobility',
     summary: '차량 주행·ECU 데이터를 수집·분석하는 솔루션을 개발했습니다.',
     source: '회사소개서 5p',
-    verify: '개발 범위·결과물 상세 확보 필요',
   },
   {
     id: 'llm-judge',
@@ -119,6 +115,5 @@ export const projects = [
     type: 'ai',
     summary: 'LLM 기반 평가기술을 활용한 지능형 품질분석 및 자동평가 기술을 개발했습니다.',
     source: '회사소개서 5, 6p',
-    verify: '개발 범위·결과물 상세 확보 필요',
   },
 ];

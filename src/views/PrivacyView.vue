@@ -1,6 +1,5 @@
 <script setup>
 import PageHero from '../components/PageHero.vue';
-import VerifyFlag from '../components/VerifyFlag.vue';
 import { site } from '../data/site';
 
 const effective = '2026년 11월 18일';
@@ -45,7 +44,7 @@ const collected = [
       </article>
 
       <article class="flat" v-reveal>
-        <h2 class="h3">4. 개인정보의 제3자 제공과 처리위탁<VerifyFlag note="문의 접수 서버·메일 서비스를 외부에 위탁하면 수탁자와 위탁 업무를 여기에 명시해야 합니다." /></h2>
+        <h2 class="h3">4. 개인정보의 제3자 제공과 처리위탁</h2>
         <p>회사는 이용자의 개인정보를 제3자에게 제공하지 않습니다. 법령에 근거가 있거나 수사기관이 적법한 절차로 요구하는 경우는 예외로 합니다.</p>
         <p>개인정보 처리업무를 외부에 위탁하는 경우에는 위탁받는 자와 위탁 업무 내용을 이 방침에 공개합니다.</p>
       </article>
@@ -58,11 +57,11 @@ const collected = [
 
       <article class="flat" v-reveal>
         <h2 class="h3">6. 자동 수집 장치(쿠키 등)</h2>
-        <p>이 사이트는 방문자 분석 도구, 광고용 쿠키 등 이용자 행태정보를 수집하는 장치를 사용하지 않습니다.<VerifyFlag note="추후 접속 통계(GA 등)를 도입하면 이 항목과 쿠키 안내를 함께 수정해야 합니다." /></p>
+        <p>이 사이트는 방문자 분석 도구, 광고용 쿠키 등 이용자 행태정보를 수집하는 장치를 사용하지 않습니다.</p>
       </article>
 
       <article class="flat" v-reveal>
-        <h2 class="h3">7. 개인정보의 안전성 확보 조치<VerifyFlag note="실제 적용 중인 보호조치(암호화, 접근권한 관리 등)에 맞게 수정해 주세요." /></h2>
+        <h2 class="h3">7. 개인정보의 안전성 확보 조치</h2>
         <ul class="dot">
           <li>개인정보에 접근할 수 있는 담당자를 최소한으로 제한합니다.</li>
           <li>전송 구간은 암호화(HTTPS)하고, 접근 기록을 관리합니다.</li>
@@ -71,10 +70,9 @@ const collected = [
       </article>
 
       <article class="flat" v-reveal>
-        <h2 class="h3">8. 개인정보 보호책임자 및 문의처<VerifyFlag note="개인정보 보호책임자의 성명·직책·연락처를 확정해 입력해 주세요(개인정보 보호법 제31조)." /></h2>
+        <h2 class="h3">8. 개인정보 보호책임자 및 문의처</h2>
         <dl class="kv">
           <div><dt>회사명</dt><dd>{{ site.company }}</dd></div>
-          <div><dt>개인정보 보호책임자</dt><dd>(성명·직책 입력 필요)</dd></div>
           <div v-if="site.email"><dt>이메일</dt><dd>{{ site.email }}</dd></div>
           <div v-if="site.tel"><dt>전화</dt><dd>{{ site.tel }}</dd></div>
         </dl>
@@ -83,7 +81,7 @@ const collected = [
 
       <article class="flat" v-reveal>
         <h2 class="h3">9. 방침의 변경</h2>
-        <p>이 방침은 {{ effective }}부터 적용됩니다.<VerifyFlag note="실제 시행일을 확정해 주세요." /> 내용이 변경되는 경우 시행 7일 전부터 홈페이지를 통해 알려드립니다.</p>
+        <p>이 방침은 {{ effective }}부터 적용됩니다. 내용이 변경되는 경우 시행 7일 전부터 홈페이지를 통해 알려드립니다.</p>
       </article>
     </div>
   </section>
