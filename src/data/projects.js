@@ -1,0 +1,124 @@
+// 수행실적. 현재는 회사소개서에서 확인되는 항목만 담았습니다.
+// 과제명(공식), 사업 구분, 수행기간, 참여기관, 티벨 역할, 결과물은 자료 확보 후 채워 넣으세요.
+// 비어 있는 필드는 화면에서 "상세 정보 준비 중"으로 표시되고, 값을 넣으면 자동으로 노출됩니다.
+//
+// {
+//   id, title, years: [시작년, 종료년?], type, client?, program?,   // program: 사업 구분(정부지원사업명 등)
+//   role?, summary, outputs?: [], tech?: [], source, verify?
+// }
+
+export const projectTypes = {
+  data: 'AI 학습데이터 구축',
+  ai: 'AI 솔루션·모델 개발',
+  mobility: '모빌리티·차량 데이터',
+  service: '서비스 기획·개발',
+  program: '정부지원사업',
+};
+
+
+export const projects = [
+  {
+    id: 'kepco-ocr',
+    title: '전력량계 AI-OCR(E-CHECK) Core 및 App/Web 개발',
+    years: [2020, 2021],
+    type: 'ai',
+    client: '한국전력',
+    summary:
+      '전력량계를 촬영하는 것만으로 사용 전력량을 자동 인식·분석하는 솔루션. Object Detection 기반 아키텍처로 전력량계 영역을 검출하고 이미지 분류를 거쳐 값을 데이터화합니다.',
+    tech: ['YOLOv4', 'ResNet-50', 'MobileNet', 'Image Preprocessing'],
+    outputs: ['AI-OCR Core', 'App/Web', '특허 제10-2280306호 (이미지 인식 기반 전력량 분석 정보 제공 방법)'],
+    source: '회사소개서 5, 15, 19p',
+  },
+  {
+    id: 'data-voucher',
+    title: '데이터바우처 지원사업 공급/판매기업 및 AI 학습데이터 구축',
+    years: [2020, 2022],
+    type: 'program',
+    program: '데이터바우처 지원사업',
+    summary:
+      '2020·2021·2022년 데이터바우처 공급/판매기업으로 지정되어 AI 학습데이터 구축 프로젝트를 수행했습니다. (2020년 7개사, 2021년 6개사, 2022년 6개사)',
+    outputs: ['AI 학습데이터셋', '라벨링 플랫폼 운영 경험'],
+    source: '회사소개서 5p',
+    verify: '개별 과제명·기간·수요기업은 공식 자료 확보 필요',
+  },
+  {
+    id: 'labeling-platform',
+    title: '라벨링 플랫폼 출시 및 인간 인식 AI 모델(베타) 개발',
+    years: [2021, 2022],
+    type: 'ai',
+    summary: '자체 라벨링 플랫폼을 출시하고, 이를 기반으로 인간 인식 인공지능 모델을 베타 수준까지 개발했습니다. 현재의 S.S.L.O로 이어지는 기반입니다.',
+    outputs: ['라벨링 플랫폼', '인간 인식 AI 모델(베타)'],
+    source: '회사소개서 5p',
+  },
+  {
+    id: 'smartfarm-livestock',
+    title: '스마트팜(축산) 학습데이터 구축',
+    years: [2022],
+    type: 'data',
+    summary: '한우 번식·비육 관리를 위한 섭취, 번식 등 특정 행위 인식 시스템 개발용 학습데이터를 구축했습니다.',
+    tech: ['Bounding Box', 'Key Point'],
+    outputs: ['행동 인식 학습데이터셋'],
+    source: '회사소개서 5, 12p',
+  },
+  {
+    id: 'vehicle-field-data',
+    title: '전장부품 실증(실차) 기반 데이터 취득 및 모니터링 시스템 구축',
+    years: [2023],
+    type: 'mobility',
+    client: '한국자동차연구원',
+    summary:
+      '실차 장비로 차량 CAN·센서·GPS 데이터를 취득하고, 암호화된 LTE 구간을 통해 서버로 수집해 대시보드로 모니터링하는 시스템을 구축했습니다.',
+    tech: ['OBD-II', 'CAN', 'LTE', 'React', 'Node.js', 'TypeScript', 'InfluxDB', 'MySQL'],
+    outputs: ['실차 데이터 취득 장비 연동', 'CAN 데이터 모니터링 대시보드'],
+    source: '회사소개서 5, 17, 25p',
+    verify: '고객사·연구기관명 외부 공개 가능 여부 확인',
+  },
+  {
+    id: 'chassis-db',
+    title: '차량 주행 및 환경에 따른 차체·샤시 부품 영향도 분석 DB 구축',
+    years: [2024],
+    type: 'mobility',
+    client: '한국자동차연구원',
+    summary: '차량의 실제 주행 데이터와 주행 환경 정보를 취득하고 분석 기법을 적용해 부품 영향도 분석용 DB를 구축했습니다.',
+    outputs: ['영향도 분석 DB'],
+    source: '회사소개서 5, 17, 25p',
+    verify: '고객사·연구기관명 외부 공개 가능 여부 확인',
+  },
+  {
+    id: 'outdoor-ad',
+    title: '불법옥외광고물 탐지 시스템 개발용 데이터셋 구축',
+    years: [2024],
+    type: 'data',
+    summary: '도심 내 안전사고 분석과 위험요소 데이터 구축 사업의 일환으로 옥외광고물 데이터셋을 구축했습니다.',
+    outputs: ['옥외광고물 데이터셋'],
+    source: '회사소개서 5, 16p',
+  },
+  {
+    id: 'baas',
+    title: '폐배터리 BaaS(Battery as a Service) 서비스 기획·개발',
+    years: [2024],
+    type: 'service',
+    summary:
+      '전기차 등의 폐배터리 재사용·재제조·재활용 단계를 하나의 통합 서비스로 제공하는 순환 중개 시스템. 이력·성능 정보 제공과 폐배터리 모니터링 순환 시스템에 티벨의 S/W 기술을 도입했습니다.',
+    outputs: ['폐배터리 순환 중개 시스템(기획·개발)'],
+    source: '회사소개서 5, 18p',
+  },
+  {
+    id: 'ecu-analytics',
+    title: '차량 주행 및 ECU 데이터 활용 분석 솔루션 개발',
+    years: [2025],
+    type: 'mobility',
+    summary: '차량 주행·ECU 데이터를 수집·분석하는 솔루션을 개발했습니다.',
+    source: '회사소개서 5p',
+    verify: '개발 범위·결과물 상세 확보 필요',
+  },
+  {
+    id: 'llm-judge',
+    title: 'AI 기반 LLM as a Judge 자동평가 기술 개발',
+    years: [2025],
+    type: 'ai',
+    summary: 'LLM 기반 평가기술을 활용한 지능형 품질분석 및 자동평가 기술을 개발했습니다.',
+    source: '회사소개서 5, 6p',
+    verify: '개발 범위·결과물 상세 확보 필요',
+  },
+];

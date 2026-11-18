@@ -1,0 +1,41 @@
+/* 기존 S.S.L.O 로고 그라데이션(#3580e3 → #8579f3 → #b578ef → #d964b6 → #f26a84)을 기준으로 한 팔레트 */
+:root {
+  --navy-950: #05060f;
+  --navy-900: #0a0b1f;
+  --navy-800: #12143a;
+  --navy-700: #1d2052;
+
+  --violet-50: #f6f5ff;
+  --violet-100: #e9e6ff;
+  --violet-300: #b9b1ff;
+  --violet-400: #8579f3; /* brand */
+  --violet-500: #6a5be6;
+  --violet-600: #5242cf;
+  --lilac: #b578ef;
+  --pink: #d964b6;
+  --coral: #f26a84;
+  --blue-400: #3580e3;
+  --blue-500: #3b6fe0;
+  --amber-500: #f59e0b;
+
+  --grad: linear-gradient(110deg, #3580e3 0%, #8579f3 36%, #b578ef 62%, #d964b6 100%);
+  --grad-warm: linear-gradient(110deg, #8579f3 0%, #d964b6 60%, #f26a84 100%);
+
+  --ink: #0b0c1d;
+  --ink-2: #3a3f5c;
+  --muted: #697089;
+  --line: #e4e3f2;
+  --bg: #ffffff;
+  --bg-soft: #f6f5ff;
+
+  --glass: rgb(255 255 255 / 5%);
+  --glass-line: rgb(255 255 255 / 12%);
+
+  --font: 'Pretendard Variable', Pretendard, 'Noto Sans KR', 'Malgun Gothic', system-ui, sans-serif;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 2px rgb(20 16 60 / 6%), 0 1px 3px rgb(20 16 60 / 8%);
+  --shadow-md: 0 18px 40px -16px rgb(80 60 200 / 35%);
+  --container: 1200px;
+  --header-h: 76px;
+}
